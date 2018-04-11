@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     put :sort
   end
 
-  get 'todos' => 'todos#index'
+  root to: 'todos#index'
 end
