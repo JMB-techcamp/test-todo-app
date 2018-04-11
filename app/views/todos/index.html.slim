@@ -1,0 +1,16 @@
+h1 listing todos
+
+table.table.table-bordered.table-sortable
+   thead
+     tr
+       th Name
+       th
+       th
+       th
+   tbody
+     - @todos.each do |todo|
+      tr
+      tr.item(data = { model_name: todo.class.name.underscore, update_url: todo_sort_path(todo) })
+         td = todo.name
+         td = link_to 'Show', todo
+         td = link_to 'Edit', edit_todo_path(todo)
