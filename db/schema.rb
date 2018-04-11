@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410065441) do
+ActiveRecord::Schema.define(version: 20180411090209) do
 
   create_table "todos", force: :cascade do |t|
     t.string   "task_name",  limit: 255
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180410065441) do
     t.string   "dead_line",  limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "row_order",  limit: 4
   end
 
 end
