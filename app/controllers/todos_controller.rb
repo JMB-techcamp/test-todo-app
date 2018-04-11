@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-
+# this action will be called via ajax
   def sort
     todo = Todo.find(paramss[:todo_id])
     todo.update(todo_params)
@@ -7,6 +7,7 @@ class TodosController < ApplicationController
   end
 
   def index
+    @todos = Todo.rank(:row_order)
   end
 
   private
